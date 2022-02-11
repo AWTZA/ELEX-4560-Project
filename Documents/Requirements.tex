@@ -1,0 +1,189 @@
+\documentclass[letterpaper,12pt,notitlepage]{article}
+
+%\usepackage{syntonly}
+%\syntaxonly
+
+%\usepackage[UTF8]{ctex}
+
+%\usepackage{ctex}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{comment}
+
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+
+\geometry{margin=1in}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+\fancyhead[c]{ELEX-4560-0 - Telecom \& Networks Project}
+\fancyfoot[r]{\thepage}
+\fancyfoot[L]{\jobname}
+%E: Even page O: Odd page L left C center R right H header F footer
+
+\setlength{\headheight}{15pt} 
+
+
+
+
+
+\begin{document}
+\begin{titlepage}
+	\vspace{5cm}
+	\begin{center}
+		\includegraphics[scale=0.4]{bcit.png}\\
+
+		\huge{ELEX-4560-0 - Telecom \& Networks Project}\\
+		\vspace{10mm}
+		\large{\textbf{Project Requirements}}\\
+		\vspace{10mm}
+		\large{Tianze Wu}\\
+		\vspace{5mm}
+		Inhee Hwang\\
+		\vspace{5mm}
+		\today
+
+	\end{center}
+\end{titlepage}
+
+
+\section{Introduction}
+
+\par With our product, users can get alarm when the temperature, particular,
+and moisture exceed the preset value. Users can set out product in their home, 
+office, workshop and etc. to get info when accident fire, leakage and other unexpected 
+even happen and get a stragate to reslove it. 
+
+\section{Must Have}
+
+	\subsection{Temperature Detection}
+		\subsubsection{Description}
+			\par Temperature detection is one of the main feature in our project, the sensor should 
+			create a analog signal accroding to temperature. 
+		\subsubsection{How to Test}
+			\par Microcontroller must set a digital-high on a pin when temperature exceed a preset value. 
+
+	\subsection{Particular Detection}
+		\subsubsection{Description}
+			\par Particular detection is one of the main feature in our project, the sensor should 
+			create a analog signal accroding to particular. 
+		\subsubsection{How to Test}
+			\par Microcontroller must set a digital-high on a pin when particular exceed a preset value. 
+
+	\subsection{Moisture Detection}
+		\subsubsection{Description}
+			\par Moisture detection is one of the main feature in our project, the sensor should 
+				create a analog signal accroding to moisture. 
+		\subsubsection{How to Test}
+			\par Microcontroller must set a digital-high on a pin when moisture exceed a preset value. 
+
+	\subsection{XBee Wirless Transmission}
+		\subsubsection{Description}
+			\par Wireles transmission is an improtant role in out project design. By using the wireless 
+			transmission design, user can git rid of the annoying wire and has more fixbility to place the sensors. 
+		\subsubsection{How to Test}
+			\par When the microcontroller transimit a digital-high, XBee should able to create a wireless singal 
+			on the sensor side and transimit it to the server side. 
+	
+	\subsection{Alarm System}
+		\subsubsection{Description}
+			\par Alarm system is the part that commnicate between human and machine. User should be able know the 
+			status about the place where the sensor are. 
+		\subsubsection{How to Test}
+			\par When any of the sensor trigger a digital-high, the Respberry should able to trigger a alarm to user. 
+			(e.g. flashing light, beep)
+
+	\subsection{Long-duration Operating}
+		\subsubsection{Description}
+			\par User may not confort when they need to pay attention to device frequently especially change battery. 
+			Our product should run at a long time without any manufacture. 
+		\subsubsection{How to Test}
+			\par Our product should be able to run at least two weeks without change battery(measured by power usage and battery capacity)
+			and a stability(less or equal than one error per two weeks)
+
+
+\section{Nice to Have}
+	\subsection{Enclosure}
+		\subsubsection{Description}
+			\par It is nice to have an enclosure that printed by a 3d printer to fit all the parts. 
+		\subsubsection{How to Test}
+			\par A enclosure created by 3D printer. 
+
+	\subsection{Water Proof}
+		\subsubsection{Description}
+			\par Our product shoud be able to work in any unexpected enviroment. Watere proof is a main factor to 
+			cause eletronic failure. 
+		\subsubsection{How to Test}
+			\par Sensor can remain work when water fall from above. 
+
+\section{Wishes}
+
+	\subsection{Email Notice}
+		\subsubsection{Description}
+			\par User may not often stay around alarm system. It is nice to have email notice when they are away. 
+		\subsubsection{How to Test}
+			\par Recieve a email when alarm is tirggered. 
+
+
+	\subsection{LCD Display}
+		\subsubsection{Description}
+			\par Having a human interface is not necessary but it is nice to have real time information. 
+		\subsubsection{How to Test}
+			\par Can diaplay real-time temp/particular/moisture parameter with a refresh rate of 10 sec. 
+
+
+	\subsection{}
+		\subsubsection{Description}
+			\par 
+		\subsubsection{How to Test}
+			\par 
+
+\end{document}
+
+
+
+\begin{comment}
+
+	\begin{figure}[ht!]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width = \textwidth]{pic.jpg}
+			\caption{Differentiate Sine Wave}
+		\end{subfigure}
+		\begin{subfigure}[b]{0.45\textwidth}
+			\includegraphics[width = \textwidth]{pic.jpg}
+			\caption{Differentiate Triangle Wave}
+		\end{subfigure}
+	\end{figure}
+	
+	\includegraphics[width = \textwidth]{pic.jpg}
+	
+	example of picture 
+	
+	\begin{table}[ht!]
+		\centering
+		\begin{tabular}{ |c |c |}
+			\hline
+			Parameter & Measured with RCL Meter \\
+			\hline
+			Capacitance [µF] & 25.78 \\
+			\hline
+			Inductance [µH] &  60.58\\
+			\hline
+		\end{tabular}
+		\caption{Cable Capacitance and Inductance Measurements (RCL Meter)}
+	\end{table}
+	Example of table
+	\end{comment}
