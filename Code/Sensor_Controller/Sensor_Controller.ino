@@ -18,6 +18,8 @@ void loop() {
     int inByte = Serial1.read();
     Serial1.print(inByte);
     Serial1.print("abc");
+    int sensorValue = analogRead(A0);
+    Serial1.print("sensorValue");
     digitalWrite(LED_BUILTIN, HIGH);
     delay(10);
     digitalWrite(LED_BUILTIN, LOW);
