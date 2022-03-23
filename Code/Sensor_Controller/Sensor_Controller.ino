@@ -15,7 +15,6 @@ void loop() {
 
   while (1)//Serial1.available()
   {
-<<<<<<< HEAD
     int inByte = Serial1.read();
     Serial1.print(inByte);
     Serial1.print("abc");
@@ -23,7 +22,7 @@ void loop() {
     Serial1.print("sensorValue");
     digitalWrite(LED_BUILTIN, HIGH);
     delay(10);
-=======
+
     int Message_In = Serial1.read();
     //Serial1.print(inByte);
     //Serial1.print("abc");
@@ -34,12 +33,11 @@ void loop() {
       Serial1.println(Sound_Value);
       delay(200);
     }
-    if(Water_Value<720){
+    if(Water_Value<670){
       Serial1.println(Water_Value);
       delay(200);
     }
     
->>>>>>> 704eb7e524d1d7d40bd458ad4a937b11d9518532
     digitalWrite(LED_BUILTIN, LOW);
     delay(200);
     digitalWrite(LED_BUILTIN, HIGH);
