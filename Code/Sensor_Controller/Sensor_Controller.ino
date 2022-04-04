@@ -5,7 +5,13 @@ void setup() {
   Serial1.begin(9600);
   //Serial1.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);      // set LED pin as output
+  pinMode(14,OUTPUT);
+  pinMode(16,OUTPUT);
+  pinMode(18,OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);    // switch off LED pin1
+  digitalWrite(14, LOW);
+  digitalWrite(16, LOW);
+  digitalWrite(18, LOW);
 }
 
 void loop() {
@@ -35,8 +41,10 @@ void loop() {
     }
     
     digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(16, LOW);
     delay(200);
     digitalWrite(LED_BUILTIN, HIGH);
+    digitalWrite(16, HIGH);
     //delay(1000);
     
   }
