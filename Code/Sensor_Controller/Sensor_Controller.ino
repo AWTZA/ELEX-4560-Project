@@ -2,7 +2,6 @@ void setup() {
   // put your setup code here, to run once:
 
   Serial.begin(9600);
-  Serial1.begin(9600);
   //Serial1.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);      // set LED pin as output
   pinMode(14,OUTPUT);
@@ -20,7 +19,7 @@ void loop() {
   char receivedData;
   digitalWrite(14, HIGH); //status
 
-  while (1)//Serial1.available()
+  while (1)//Serial1.available()>0
   {
     //int inByte = Serial1.read();
 
@@ -35,9 +34,11 @@ void loop() {
     int Tem_value = analogRead(A7);
     
     //float voltage = sensorValue * (5.0 / 1023.0);
-    Serial1.println(Tem_value);
-    if(Tem_value>35){
-      digitalWrite(16, HIGH);
+    Serial.println(Tem_value);
+    Serial1.println("123");
+    Serial.println("123");
+    if(Tem_value>700){
+      //digitalWrite(16, HIGH);
       delay(500);
     }
     digitalWrite(LED_BUILTIN, LOW);
