@@ -1,9 +1,15 @@
+  #include <SoftwareSerial.h>
+
+
 void setup() {
   // put your setup code here, to run once:
   Serial1.begin(9600);
   //Serial1.begin(9600);
   //Serial1.begin(9600);
-  pinMode(LED_BUILTIN, OUTPUT);      // set LED pin as output
+
+  
+
+
 
   pinMode(14, OUTPUT);      // set LED pin as output
 }
@@ -17,6 +23,7 @@ void loop() {
   delay(500);
   digitalWrite(14, LOW);
   //digitalWrite(LED_BUILTIN, LOW);
+   digitalWrite(18, LOW);
     delay(500);
    // digitalWrite(LED_BUILTIN, HIGH);
 }
