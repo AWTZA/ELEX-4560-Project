@@ -19,18 +19,19 @@ void loop() {
   // put your main code here, to run repeatedly:
   // char receivedData
   char receivedData;
-  
+  digitalWrite(LED_BUILTIN, HIGH);
   while (Serial1.available() == 0) //
   {
     //int inByte = Serial1.read();
 
-  digitalWrite(LED_BUILTIN, HIGH);
+
   
 
   //Serial1.print(inByte);
   int sensor_value = analogRead(A7);
+  sensor_value = abs(sensor_value - 950);
   String num = String(sensor_value);
-  String send = "Temperature_Sensor:" + num  ;
+  String send = "Wate_Leak_Sensor:" + num  ;
 
   //float voltage = sensorValue * (5.0 / 1023.0);
   Serial1.println(send);
@@ -38,7 +39,7 @@ void loop() {
   //Serial1.println();
 
 
-  if (sensor_value > 675) { //>675 for temp; <600 for water
+  if (sensor_value > 300) { //>675 for temp; <600 for water
     Serial1.println("XxxX");
     digitalWrite(16, HIGH);
     digitalWrite(18, HIGH);
